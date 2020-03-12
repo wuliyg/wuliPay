@@ -1,18 +1,20 @@
 package com.wuligao.work.pay.config;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import com.alipay.api.AlipayClient;
+import com.alipay.api.DefaultAlipayClient;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @author wuligao
  * @date 2020-03-11
  */
+@Configuration
 public class AlipayConfig {
 
     /**
      * 网关沙箱(测试环境)
      */
-    private static final String URL = "https://openapi.alipaydev.com/gateway.do";
+    private static final String URL = "";
 
     /**
      * appId
@@ -31,7 +33,7 @@ public class AlipayConfig {
     /**
      * 签名算法类型(根据生成私钥的算法,RSA2或RSA)
      */
-    private static final String SIGNTYPE = "RSA2";
+    private static final String SIGNTYPE = "RSA";
 
     /**
      * 请求数据格式
@@ -42,16 +44,6 @@ public class AlipayConfig {
      */
     private static final String CHARSET = "utf-8";
 
-    /**
-     * 服务器异步通知页面路径  需http://或者https://格式的完整路径
-     * 不能加?id=123这类自定义参数，必须外网可以正常访问
-     */
-    public static final String OWnotify_url = "";//网站扫码
-    /**
-     * 页面跳转同步通知页面路径 需http://或者https://格式的完整路径，
-     * 不能加?id=123这类自定义参数，必须外网可以正常访问 商户可以自定义同步跳转地址
-     */
-    public static final String OWreturn_url = "";//网站扫码
 
     // 统一收单交易创建接口
     private static AlipayClient alipayClient = null;

@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: wuliPay-server
+
+#正式环境
+alipay:
+  # 应用专属appId (当前支付宝账号)
+  ALIPAY_APPID: 2016101700709799
+  # 支付SDK请求网关地址
+  URL: https://openapi.alipaydev.com/gateway.do
+  # 加密RSA公钥
+  APP_PRIVATE_KEY: MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAJrr/96lXbfWcDDTqtlwoO3HAJ7EFhALDtp7OLRq5Rm3VOoHm7z8dWxQsB1ltXWadg00KIV0o5ttJxFjsW+J4puGUbZemN1Th+ff5xGbPSSziSaOc5J0hb4dBdJBqTRjMONrzoxVEY787FypqphUvMDE7gSX3xdSMqZFaA3cT2y/AgMBAAECgYEAhhKJzJiWY7v8OfVlHWrgiwc3HS+b3GSFhUUwjMsZ3EiR/zt4Z3Sg9o1Z7QcRpGZ5lfG2w9Buqtsq/VymuV2+MvfQNcYudw8f1MUxnXdWDaQNJ8yv3sRZ5s3zvS3EHhxbgBK5CRd2+LDz9nGJhJL0i+DD0u16/L+9E7jIhFFwUJECQQDndkZjl6+nGT3VfiQmnAqIw1ZQeTuZ0wMm8l1K/6kXv20a6wSA934Jiy3TpkbM9LaC7KvoCveq20m+ozkWOVy5AkEAq1h54ItpeNr99B6qjNaOrVlBsW8IZtkePB7l+5Sv6WUskjbUooTr3xsdr7pUlqhmdN3ETdsgtgr/ZIXXxooJNwJBAJbDs5Wrd/6fsmcdgu6jNTlgAxjn3qqTh7oWpC312W5egfLGomhezPnqbi8uX2+g9kDRaCf8/NWNgLtsFgMj2gECQF+cnVW5NX+k47THL/ArAa6lcczq4ktRuFdf/oFmNMsOE9L7Gaged+glH2mhlfYDvjhUT2gKcLRkaqLTNNaqy/0CQHQBSoMCZSK0UHuJUFHEky5rk1uJ9QCoO9hG+2tKM7ucYsHg9eFcQYBehjjhcH7PLphfPU8C17QB/nl1Vo4pOvE=
+  # 解密RSA私钥
+  ALIPAY_PUBLIC_KEY: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCa6//epV231nAw06rZcKDtxwCexBYQCw7aezi0auUZt1TqB5u8/HVsULAdZbV1mnYNNCiFdKObbScRY7FvieKbhlG2XpjdU4fn3+cRmz0ks4kmjnOSdIW+HQXSQak0YzDja86MVRGO/OxcqaqYVLzAxO4El98XUjKmRWgN3E9svwIDAQAB
+  # 通知地址
+  notifyUrl: http://wuligao.utools.club/alipay/notify
+  # 回调地址
+  returnUrl: http://wuligao.utools.club/alipay/return
